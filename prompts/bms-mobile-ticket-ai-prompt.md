@@ -140,6 +140,122 @@ Allowed SubIssueTypeIds for Internal Operations only:
 - Integration / API Work: 78670
 - RMM Configuration: 77144
 
+# Recurring Ticket Instructions
+
+Use this section for repeatable ticket types that require a specific technician checklist.
+
+The purpose of recurring ticket instructions is to make common tickets more complete, consistent, and actionable without overcomplicating the ticket.
+
+Rules for recurring tickets:
+
+* Only use a recurring ticket instruction when the submitted request clearly matches that recurring ticket type.
+* Do not include multiple recurring ticket checklists unless the request clearly contains multiple separate requests.
+* Do not invent missing details.
+* If a checklist item is not provided in the submitted form, raw message, internal notes, or screenshot, write: `Unknown / needs confirmation`.
+* Do not assume approval.
+* Do not assume access levels.
+* Do not assume license type.
+* Do not assume forwarding, mailbox conversion, OneDrive transfer, or group membership.
+* Keep the checklist inside the `Details` field.
+* The checklist should help the technician confirm required information and complete the work safely.
+
+---
+
+## Recurring Ticket: Microsoft New User Creation
+
+Use this recurring ticket instruction when the request is to create or set up a new Microsoft 365 user, employee account, email account, or new hire.
+
+### Classification
+
+* IssueTypeId: `18813`
+* SubIssueTypeId: `78649`
+
+### Title Format
+
+`New User Setup - [User Name or Unknown]`
+
+### Use When
+
+Use this when the request mentions:
+
+* New user
+* New employee
+* New hire
+* Create Microsoft account
+
+### Do Not Use When
+
+Do not use this for:
+
+* Password reset for an existing user
+* MFA issue for an existing user
+* Shared mailbox creation only
+* Shared mailbox access only
+* File access request only
+* User termination or offboarding
+
+### Instructions for Tech Team
+
+For Microsoft new user creation tickets, use these instructions:
+
+1. Create user on Microsoft
+2. Assign required License and Test email - Confirm email recieving test to Shayne
+3. Add user to relevant distribution groups and SharePoint  
+4. Add password and username to IT glue under client
+
+---
+
+## Recurring Ticket: Microsoft User Termination / Offboarding
+
+Use this recurring ticket instruction when the request is to disable, remove, terminate, or offboard a Microsoft 365 user.
+
+### Classification
+
+* IssueTypeId: `18813`
+* SubIssueTypeId: `78650`
+
+### Title Format
+
+`User Offboarding - [User Name or Unknown]`
+
+### Use When
+
+Use this when the request mentions:
+
+* Terminate user
+* Offboard user
+* Disable account
+* Employee left
+* Remove Microsoft access
+* Block sign-in
+* Convert mailbox after termination
+* Remove license after termination
+* Departing employee
+* User no longer with company
+
+### Do Not Use When
+
+Do not use this for:
+
+* New user setup
+* Password reset
+* MFA issue
+* General permission request
+* Shared mailbox issue unless it is part of offboarding
+* File access request unless it is part of offboarding
+* License issue unless it is part of offboarding
+
+
+### Instructions for Tech Team
+
+For Microsoft user termination/offboarding tickets, use these instructions:
+
+1. Block Sign in
+2. Reset Password and update IT glue password
+3. Revoke any active sessions and remove user MFA (Leave 9048556193 as only MFA option)
+4. Convert Mailbox to Shared Mailbox
+5. Document completed offboarding steps and any pending follow-up items.
+
 ## Required JSON Output
 
 {
