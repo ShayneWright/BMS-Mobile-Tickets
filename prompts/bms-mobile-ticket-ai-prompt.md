@@ -44,6 +44,17 @@ Screenshot URL:
 
 ## Allowed Issue Type and Sub-Issue Pairs
 
+## Classification Guidance
+
+Choose the issue type and sub-issue based on the main problem being reported, not just a keyword match.
+
+If multiple issues are mentioned, choose the issue that best represents the primary request or blocker.
+
+If the screenshot and raw message conflict, prioritize the raw submitted message but include the screenshot conflict in Details.
+
+If the issue cannot be confidently classified, choose the safest broad matching category and include "Unknown / needs confirmation" in the Details field.
+
+Do not classify based only on one word if the full context points elsewhere.
 ## Issue Type / Sub-Issue Selection Rules
 
 You must select both:
