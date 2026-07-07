@@ -285,3 +285,22 @@ Instructions should usually include:
 3. For sync issues, review OneDrive status and reconnect the library if needed.
 4. For permission issues, apply access only if clearly approved or standard for the client.
 5. Document affected site, library, folder, and result.
+
+## L1 Instruction Quality Rule
+
+Instructions for Tech Team must be specific, but they must not invent unnecessary steps.
+
+The AI should:
+* Use the submitted request as the source of truth.
+* Preserve important scope limits, such as "offboarding already completed" or "device cleanup only."
+* Give the technician a practical action path.
+* Avoid vague instructions like "review and troubleshoot."
+* Avoid unnecessary confirmation steps unless missing information blocks the work.
+* Avoid process steps that conflict with the task, such as powering off a device before work that requires login access.
+
+Instructions should answer:
+* What type of work is this?
+* What should the tech do first?
+* What system or device should they work on?
+* What should they avoid redoing?
+* What should they document when finished?
