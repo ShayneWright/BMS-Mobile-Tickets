@@ -69,6 +69,17 @@ Instructions should be action-oriented and should tell the technician what to ch
 
 Do not over-ask questions. Only tell the technician to escalate or ask for clarification when missing information blocks the work or creates a security, billing, licensing, or approval risk.
 
+## Submitted Details Source of Truth Rule
+
+Use the submitted form fields, raw message, internal notes, and screenshot as the source of truth.
+
+Do not tell the technician to reconfirm information that was already clearly provided.
+
+Only instruct the technician to ask for clarification when:
+* The missing detail blocks completion.
+* The request involves security, access, billing, licensing, or data handling risk.
+* The submitted message conflicts with the screenshot.
+* The request is unclear enough that action could affect the wrong user, device, mailbox, or client.
 
 
 ## Allowed Issue Type and Sub-Issue Pairs
@@ -169,44 +180,6 @@ Allowed SubIssueTypeIds for Internal Operations only:
 - Integration / API Work: 78670
 - RMM Configuration: 77144
 
-
-
-## Required JSON Output
-
-{
-  "Title": "",
-  "Details": "",
-  "IssueTypeId": 0,
-  "SubIssueTypeId": 0,
-  "ScreenshotReadStatus": "",
-  "ScreenshotRelevantText": ""
-}
-
-## Details Field Format
-
-The Details field should include:
-
-Client/User Reported Issue:
-[summary]
-
-Affected User:
-[user or Unknown]
-
-Source:
-[source]
-
-Relevant Screenshot Details:
-[important text or issue details read from screenshot]
-
-Raw Submitted Message:
-[raw message]
-
-Internal Notes:
-[internal notes or None]
-
-Screenshot:
-[screenshot URL]
-
 Instructions for Tech Team:
 [Write 3-6 specific L1 MSP next steps based on the request, screenshot, issue type, and likely system involved. Do not use generic review/troubleshoot wording.]
 
@@ -304,3 +277,41 @@ Instructions should answer:
 * What system or device should they work on?
 * What should they avoid redoing?
 * What should they document when finished?
+
+
+## Required JSON Output
+
+{
+  "Title": "",
+  "Details": "",
+  "IssueTypeId": 0,
+  "SubIssueTypeId": 0,
+  "ScreenshotReadStatus": "",
+  "ScreenshotRelevantText": ""
+}
+
+## Details Field Format
+
+The Details field should include:
+
+Client/User Reported Issue:
+[summary]
+
+Affected User:
+[user or Unknown]
+
+Source:
+[source]
+
+Relevant Screenshot Details:
+[important text or issue details read from screenshot]
+
+Raw Submitted Message:
+[raw message]
+
+Internal Notes:
+[internal notes or None]
+
+Screenshot:
+[screenshot URL]
+
